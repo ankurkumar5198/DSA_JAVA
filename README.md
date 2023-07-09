@@ -1,1 +1,1 @@
-# DSA_JAVA
+# Competitive Coding Practice
