@@ -9,7 +9,7 @@ class blockswap
 		leftRotateRec(arr, 0, d, n);
 	}
 
-	public static void leftRotateRec(int arr[], int i,
+	public static void  leftRotateRec(int arr[], int i,
 								int d, int n)
 	{
 	
