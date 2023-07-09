@@ -1,0 +1,59 @@
+<!-- Program in JS to find ith highest and smallest number in an array. -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Find ith Smallest & Largest Number</title>
+</head>
+<body> 
+  <h1>Find ith Smallest & Largest Number</h1>
+  
+  <label for="numbers">Enter numbers for array (comma-separated):</label><br>
+  <input type="text" id="numbers"><br>
+  
+  <label for="ith">Enter the value of i:</label><br>
+  <input type="text" id="ith"><br>
+  
+  <button  onclick="findIthSmallestAndLargest()">Find</button>
+  
+  <h2>Results:</h2>
+  <div id="output"></div>
+  
+  <script>
+    function findIthSmallestAndLargest() {
+      var numbersInput = document.getElementById("numbers").value;
+      var numbers = numbersInput.split(",").map(Number);
+      var i = parseInt(document.getElementById("ith").value);
+      
+      if (isNaN(i) || i <= 0 || i > numbers.length) {
+        document.getElementById("output").innerHTML = "Invalid value of i";
+        return;
+      }
+      
+      numbers.sort(function(a, b) {
+        return a - b;
+      });
+      
+      var result = {};
+      result.smallest = numbers[i - 1];
+      result.largest = numbers[numbers.length - i];
+      
+      document.getElementById("output").innerHTML = "Ith Smallest: " + result.smallest + "<br>Ith Largest: " + result.largest;
+    }
+  </script>
+</body>
+ </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
