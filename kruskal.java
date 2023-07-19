@@ -106,7 +106,7 @@ public class kruskal {
 	{
 		if (subsets[i].parent == i)
 			return subsets[i].parent;
-
+     
 		subsets[i].parent
 			= findRoot(subsets, subsets[i].parent);
 		return subsets[i].parent;
